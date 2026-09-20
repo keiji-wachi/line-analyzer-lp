@@ -20,7 +20,8 @@ export default function SectionHeading({
     <div className={`max-w-3xl ${alignment}`}>
       {eyebrow && (
         <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-primary">
-          // {eyebrow}
+          {"// "}
+          {eyebrow}
         </p>
       )}
 
