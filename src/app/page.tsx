@@ -1,4 +1,6 @@
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
 import HeroSection from "@/components/sections/HeroSection";
 import ProglemSection from "@/components/sections/ProblemSection";
 import FeaturesSection from "@/components/sections/FeatureSection";
@@ -19,6 +21,9 @@ export default function Home() {
         <SpecificationSection />
         <ContactSection />
       </main>
+
+      <Footer />
+
     </>
   );
 }
