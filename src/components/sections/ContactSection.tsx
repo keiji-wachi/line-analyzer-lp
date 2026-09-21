@@ -5,7 +5,7 @@ import {
   MonitorSmartphone,
 } from "lucide-react";
 
-import ContactForm from "@/components/contact/ContactForm";
+import ContactLinks from "@/components/contact/ContactLinks";
 import SectionHeading from "@/components/common/SectionHeading";
 import Section from "@/components/layout/Section";
 
@@ -37,7 +37,7 @@ export default function ContactSection() {
         description="Web・LP制作のご相談など、お気軽にお問い合わせください。"
       />
 
-      <div className="mt-16 grid items-stretch gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
+      <div className="mt-16 grid items-start gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
         {/* 案件受付情報 */}
         <div className="rounded-card border border-border/60 bg-surface p-6 sm:p-8">
           <p className="text-sm font-semibold tracking-[0.16em] text-primary">
@@ -80,8 +80,8 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* 問い合わせフォーム */}
-        <ContactForm />
+        {/* 相談方法 */}
+          <ContactLinks />
       </div>
     </Section>
   );
