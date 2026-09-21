@@ -38,7 +38,7 @@ export default function ContactLinkCard({
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="group flex items-center gap-4 rounded-xl border border-border/60 bg-background p-5 transition hover:border-primary/70 hover:bg-primary/5"
+      className="group flex items-center gap-4 rounded-xl border border-border/60 bg-background p-5 transition duration-300 hover:-translate-y-1 hover:border-primary/70 hover:bg-primary/5 hover:shadow-glow"
     >
       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
         <Icon size={22} aria-hidden="true" />

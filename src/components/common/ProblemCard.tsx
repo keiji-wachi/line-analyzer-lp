@@ -25,7 +25,7 @@ export default function ProblemCard({
   const Icon = iconMap[icon];
 
   return (
-    <article className="rounded-card border border-border bg-surface p-6 shadow-card">
+    <article className="rounded-card border border-border bg-surface p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
       <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-danger/10 text-danger">
         <Icon
           size={22}

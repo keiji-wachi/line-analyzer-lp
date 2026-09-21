@@ -47,7 +47,7 @@ export default function TechCard({
   const Icon = iconMap[icon];
 
   return (
-    <article className="rounded-card border border-border/60 bg-surface p-6">
+    <article className="rounded-card border border-border/60 bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
       <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
         <Icon size={26} aria-hidden="true" />
       </div>

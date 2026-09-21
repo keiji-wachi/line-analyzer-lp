@@ -30,7 +30,7 @@ export default function SpecificationCard({
   const Icon = iconMap[icon];
 
   return (
-    <article className="rounded-card border border-border/60 bg-surface p-8 lg:p-9">
+    <article className="rounded-card border border-border/60 bg-surface p-8 transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow lg:p-9">
         <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
             <Icon size={30} strokeWidth={2} aria-hidden="true" />
         </div>
