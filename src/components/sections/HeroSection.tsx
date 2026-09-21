@@ -3,6 +3,8 @@ import Image from "next/image";
 import Button from "@/components/common/Button";
 import Container from "@/components/layout/Container";
 
+import FloatingVisual from "@/components/motion/FloatingVisual";
+
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden">
@@ -40,6 +42,7 @@ export default function HeroSection() {
 
           {/* Product Visual */}
           <div className="relative lg:-mr-10">
+            <FloatingVisual>
             <Image
               src="/images/hero/dashboard-devices.png"
               alt="LineAnalyzerのPC版とスマートフォン版データ分析画面"
@@ -48,6 +51,7 @@ export default function HeroSection() {
               priority
               className="h-auto w-full lg:scale-[1.12]"
             />
+            </FloatingVisual>
           </div>
         </div>
       </Container>
