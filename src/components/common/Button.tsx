@@ -7,6 +7,8 @@ type ButtonProps = {
   disabled?: boolean;
   onClick?: () => void;
   className?: string;
+  href?: string;
+  external?: boolean;
 };
 
 export default function Button({
@@ -16,9 +18,11 @@ export default function Button({
   disabled = false,
   onClick,
   className = "",
+  href,
+  external = false,
 }: ButtonProps) {
   const baseStyle =
-    "inline-flex items-center justify-center rounded-button px-6 py-3 font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
+    "inline-flex items-center justify-center rounded-button px-6 py-3 font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2";
 
   const variantStyle = {
     primary:
@@ -27,12 +31,27 @@ export default function Button({
       "border border-border bg-surface text-text-primary hover:border-primary hover:text-primary focus-visible:outline-primary",
   };
 
+  const styles = `${baseStyle} ${variantStyle[variant]} ${className}`;
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target={external ? "_blank" : undefined}
+        rel={external ? "noopener noreferrer" : undefined}
+        className={styles}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
       type={type}
       disabled={disabled}
       onClick={onClick}
-      className={`${baseStyle} ${variantStyle[variant]} ${className}`}
+      className={`${styles} disabled:cursor-not-allowed disabled:opacity-50`}
     >
       {children}
     </button>

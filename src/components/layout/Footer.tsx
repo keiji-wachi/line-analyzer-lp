@@ -3,6 +3,7 @@ import { SiGithub } from "react-icons/si";
 
 import Container from "@/components/layout/Container";
 import { navigationItems } from "@/data/navigation";
+import { LINKS } from "@/constants/links";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -53,7 +54,7 @@ export default function Footer() {
             {/* External Links */}
             <div>
               <a
-                href="https://github.com/keiji-wachi/line-analyzer-lp"
+                href={LINKS.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-text-secondary transition-colors hover:text-primary"

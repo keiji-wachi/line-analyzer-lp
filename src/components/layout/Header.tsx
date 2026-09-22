@@ -7,6 +7,8 @@ import Container from "@/components/layout/Container";
 import { navigationItems } from "@/data/navigation";
 import MobileMenu from "./MobileMenu";
 
+import {LINKS} from "@/constants/links"
+
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
@@ -41,7 +43,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <Button>
+            <Button href={LINKS.demo} external>
               デモを体験
             </Button>
           </div>
