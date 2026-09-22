@@ -11,7 +11,7 @@ export const features = [
       "入力バリデーション",
       "登録前の内容確認",
     ],
-    image: "/images/features/incident-form.png",
+    image: "/images/features/incident-entry.png",
     imageAlt: "LineAnalyzerの異常対応入力画面",
     reverse: false,
   },
