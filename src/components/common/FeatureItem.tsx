@@ -62,13 +62,14 @@ export default function FeatureItem({
       </div>
 
       <div className="relative">
-          <Image
-            src={image}
-            alt={imageAlt}
-            width={1400}
-            height={900}
-            className="h-auto w-full"
-          />
+        <Image
+          src={image}
+          alt={imageAlt}
+          width={1400}
+          height={900}
+          sizes="(max-width: 1024px) 90vw, 42vw"
+          className="h-auto w-full"
+        />
       </div>
     </article>
   );

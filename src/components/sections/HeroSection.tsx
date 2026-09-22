@@ -48,7 +48,8 @@ export default function HeroSection() {
               alt="LineAnalyzerのPC版とスマートフォン版データ分析画面"
               width={1780}
               height={884}
-              priority
+              preload
+              sizes="(max-width: 1024px) 90vw, 58vw"
               className="h-auto w-full lg:scale-[1.12]"
             />
             </FloatingVisual>
