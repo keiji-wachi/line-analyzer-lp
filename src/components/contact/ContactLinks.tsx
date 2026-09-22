@@ -5,10 +5,12 @@ import { PLATFORM } from "@/constants/platform";
 const contactMessages = {
   crowdworks:
     "ご相談・お見積りは、クラウドワークス内のメッセージからお願いいたします。",
+
   lancers:
     "ご相談・お見積りは、ランサーズ内のメッセージからお願いいたします。",
+
   general:
-    "各クラウドソーシングサービス内のメッセージからご相談ください。",
+    "クラウドソーシングサービスをご利用の場合は、各サービス内のメッセージ機能からご相談ください。直接のご相談はメールでも受け付けています。",
 } as const;
 
 export default function ContactLinks() {
