@@ -4,6 +4,7 @@ import Button from "@/components/common/Button";
 import Container from "@/components/layout/Container";
 
 import FloatingVisual from "@/components/motion/FloatingVisual";
+import { LINKS } from "@/constants/links";
 
 export default function HeroSection() {
   return (
@@ -31,27 +32,45 @@ export default function HeroSection() {
             </p>
 
             <div className="mt-8 flex justify-center lg:justify-start">
-              <Button>無料デモを体験する</Button>
+              <Button href={LINKS.demo} external>
+                無料デモを体験する
+              </Button>
             </div>
 
             <div className="mt-5 text-sm leading-6 text-text-muted">
               <p>デモアカウントで今すぐ体験できます。</p>
-              <p>ID / Password はデモ公開時に掲載予定</p>
+
+              <p className="mt-1">
+                ID:{" "}
+                <span className="font-medium text-text-secondary">
+                  DemoUser
+                </span>
+                {" / "}
+                Password:{" "}
+                <span className="font-medium text-text-secondary">
+                  demo1234
+                </span>
+              </p>
+
+              <p className="mt-2 text-xs leading-5">
+                ※ 初回アクセス時はデモサーバーの起動により、
+                ログイン完了まで1分程度かかる場合があります。
+              </p>
             </div>
           </div>
 
           {/* Product Visual */}
           <div className="relative lg:-mr-10">
             <FloatingVisual>
-            <Image
-              src="/images/hero/dashboard-devices.png"
-              alt="LineAnalyzerのPC版とスマートフォン版データ分析画面"
-              width={1780}
-              height={884}
-              preload
-              sizes="(max-width: 1024px) 90vw, 58vw"
-              className="h-auto w-full lg:scale-[1.12]"
-            />
+              <Image
+                src="/images/hero/dashboard-devices.png"
+                alt="LineAnalyzerのPC版とスマートフォン版データ分析画面"
+                width={1780}
+                height={884}
+                preload
+                sizes="(max-width: 1024px) 90vw, 58vw"
+                className="h-auto w-full lg:scale-[1.12]"
+              />
             </FloatingVisual>
           </div>
         </div>
